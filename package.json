@@ -1,0 +1,37 @@
+{
+  "name": "threesample",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "copy:client:html": "(robocopy /MIR src/client dist *.html) ^& IF %ERRORLEVEL% LEQ 3 exit 0",
+    "build:client": "rimraf dist/ && npm run copy:client:html && webpack",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mikhinja/ThreeSample.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mikhinja/ThreeSample/issues"
+  },
+  "homepage": "https://github.com/Mikhinja/ThreeSample#readme",
+  "dependencies": {
+    "@types/react": "^16.0.9",
+    "@types/react-dom": "^16.0.0",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "rimraf": "^2.6.2"
+  },
+  "devDependencies": {
+    "eslint": "^4.8.0",
+    "source-map-loader": "^0.2.2",
+    "ts-loader": "^2.3.7",
+    "tsc": "^1.20150623.0",
+    "tslint": "^5.7.0",
+    "typescript": "^2.5.3",
+    "webpack": "^3.6.0"
+  }
+}
